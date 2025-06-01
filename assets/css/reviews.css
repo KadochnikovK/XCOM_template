@@ -1,0 +1,204 @@
+.reviews {
+  padding: var(--padding-xl) 0;
+  background-color: var(--color-grey-light);
+  position: relative;
+}
+.reviews__wrapper {
+  display: grid;
+  grid-template-areas: "rating list";
+  grid-template-columns: 250px 1fr;
+  gap: var(--gap-lg);
+}
+@media (max-width: 767px) {
+  .reviews__wrapper {
+    grid-template-areas: "rating" "list";
+    grid-template-columns: 1fr;
+  }
+}
+.reviews__headline {
+  grid-area: headline;
+}
+.reviews__headline::after {
+  background-color: var(--color-orange);
+}
+.reviews__list {
+  grid-area: list;
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-lg);
+}
+.reviews__add {
+  grid-area: add;
+  align-self: center;
+  margin-top: var(--gap-md);
+}
+
+.rating {
+  grid-area: rating;
+  background: var(--color-white);
+  padding: var(--padding-lg);
+  border-radius: var(--radius-sm);
+  height: -moz-fit-content;
+  height: fit-content;
+  position: sticky;
+  top: 20px;
+  bottom: 100px;
+}
+.rating__title {
+  font-size: var(--fs-base);
+  color: var(--color-blue-main);
+  margin-bottom: var(--padding-md);
+  text-align: center;
+}
+.rating__stars {
+  display: flex;
+  flex-direction: column;
+  gap: var(--padding-sm);
+}
+.rating__star {
+  display: flex;
+  align-items: center;
+  gap: var(--gap-sm);
+  font-size: var(--fs-sm);
+  color: var(--color-orange);
+}
+.rating__star i {
+  color: var(--color-orange);
+}
+.rating__bar {
+  flex-grow: 1;
+  height: 8px;
+  background: var(--color-grey-light);
+  border-radius: 4px;
+  overflow: hidden;
+}
+.rating__bar-fill {
+  height: 100%;
+  background: var(--color-orange);
+}
+.rating__count {
+  min-width: 20px;
+  text-align: right;
+  color: var(--color-regular);
+}
+
+.review {
+  background-color: var(--color-white);
+  border-radius: var(--radius-sm);
+  padding: var(--padding-lg);
+}
+.review__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: var(--gap-md);
+  margin-bottom: var(--padding-md);
+}
+.review__user {
+  display: flex;
+  gap: var(--gap-md);
+  align-items: flex-start;
+}
+.review__avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-white);
+  font-weight: bold;
+  font-size: var(--fs-base);
+  flex-shrink: 0;
+}
+.review__info {
+  flex-grow: 1;
+}
+.review__author {
+  font-size: var(--fs-base);
+  color: var(--color-blue-main);
+  font-weight: 600;
+  margin: 0;
+}
+.review__meta {
+  display: flex;
+  gap: var(--gap-md);
+  align-items: center;
+  flex-wrap: wrap;
+}
+.review__date {
+  font-size: var(--fs-xs);
+  color: var(--color-grey);
+}
+.review__user-rating {
+  display: flex;
+  gap: 2px;
+}
+.review__user-rating i {
+  color: var(--color-orange);
+  font-size: var(--fs-xs);
+}
+.review__body {
+  margin-top: var(--padding-md);
+}
+.review__subtitle {
+  font-size: var(--fs-sm);
+  color: var(--color-blue-main);
+  margin: var(--padding-md) 0 var(--padding-sm);
+}
+.review__comment p, .review__pros p, .review__cons p {
+  font-size: var(--fs-sm);
+  line-height: var(--lh-md);
+  margin: 0;
+}
+.review__actions {
+  display: flex;
+  gap: var(--gap-md);
+  margin-top: var(--padding-md);
+  align-items: center;
+}
+.review__action {
+  display: flex;
+  align-items: center;
+  gap: var(--gap-xs);
+  background: none;
+  border: none;
+  color: var(--color-grey);
+  font-size: var(--fs-xs);
+  cursor: pointer;
+  padding: var(--padding-xs) var(--padding-sm);
+  border-radius: var(--radius-sm);
+  transition: all 0.2s ease;
+}
+.review__action:hover {
+  background: var(--color-grey-light);
+}
+.review__action.liked {
+  color: var(--color-green);
+}
+.review__action.disliked {
+  color: var(--color-red);
+}
+.review__count {
+  font-size: var(--fs-xs);
+}
+.review__reply {
+  margin-left: auto;
+  color: var(--color-blue-main);
+  font-size: var(--fs-xs);
+  padding: 0;
+}
+.review__reply:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 767px) {
+  .review {
+    padding: var(--padding-md);
+  }
+  .review__meta {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--padding-xs);
+  }
+}/*# sourceMappingURL=reviews.css.map */

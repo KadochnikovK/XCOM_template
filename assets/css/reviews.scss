@@ -1,0 +1,245 @@
+.reviews {
+  padding: var(--padding-xl) 0;
+  background-color: var(--color-grey-light);
+  position: relative;
+
+  &__wrapper {
+    display: grid;
+    grid-template-areas:
+      "rating list";
+      grid-template-columns: 250px 1fr;
+    gap: var(--gap-lg);
+
+    @media (max-width: 767px) {
+      grid-template-areas:
+
+        "rating"
+        "list";
+
+        grid-template-columns: 1fr;
+    }
+  }
+
+  &__headline {
+    grid-area: headline;
+
+    &::after {
+      background-color: var(--color-orange);
+    }
+  }
+
+  &__list {
+    grid-area: list;
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-lg);
+  }
+
+  &__add {
+    grid-area: add;
+    align-self: center;
+    margin-top: var(--gap-md);
+  }
+}
+
+.rating {
+  grid-area: rating;
+  background: var(--color-white);
+  padding: var(--padding-lg);
+  border-radius: var(--radius-sm);
+  height: fit-content;
+  position: sticky;
+  top: 20px;
+  bottom: 100px;
+
+  &__title {
+    font-size: var(--fs-base);
+    color: var(--color-blue-main);
+    margin-bottom: var(--padding-md);
+    text-align: center;
+  }
+
+  &__stars {
+    display: flex;
+    flex-direction: column;
+    gap: var(--padding-sm);
+  }
+
+  &__star {
+    display: flex;
+    align-items: center;
+    gap: var(--gap-sm);
+    font-size: var(--fs-sm);
+    color: var(--color-orange);
+
+    i {
+      color: var(--color-orange);
+    }
+  }
+
+  &__bar {
+    flex-grow: 1;
+    height: 8px;
+    background: var(--color-grey-light);
+    border-radius: 4px;
+    overflow: hidden;
+  }
+
+  &__bar-fill {
+    height: 100%;
+    background: var(--color-orange);
+  }
+
+  &__count {
+    min-width: 20px;
+    text-align: right;
+    color: var(--color-regular);
+  }
+}
+
+.review {
+  background-color: var(--color-white);
+  border-radius: var(--radius-sm);
+  padding: var(--padding-lg);
+  // box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: var(--gap-md);
+    margin-bottom: var(--padding-md);
+  }
+
+  &__user {
+    display: flex;
+    gap: var(--gap-md);
+    align-items: flex-start;
+  }
+
+  &__avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-white);
+    font-weight: bold;
+    font-size: var(--fs-base);
+    flex-shrink: 0;
+  }
+
+  &__info {
+    flex-grow: 1;
+  }
+
+  &__author {
+    font-size: var(--fs-base);
+    color: var(--color-blue-main);
+    font-weight: 600;
+    margin: 0;
+  }
+
+  &__meta {
+    display: flex;
+    gap: var(--gap-md);
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  &__date {
+    font-size: var(--fs-xs);
+    color: var(--color-grey);
+  }
+
+  &__user-rating {
+    display: flex;
+    gap: 2px;
+
+    i {
+      color: var(--color-orange);
+      font-size: var(--fs-xs);
+    }
+  }
+
+  &__body {
+    margin-top: var(--padding-md);
+  }
+
+  &__subtitle {
+    font-size: var(--fs-sm);
+    color: var(--color-blue-main);
+    margin: var(--padding-md) 0 var(--padding-sm);
+  }
+
+  &__comment,
+  &__pros,
+  &__cons {
+    p {
+      font-size: var(--fs-sm);
+      line-height: var(--lh-md);
+      margin: 0;
+    }
+  }
+
+  &__actions {
+    display: flex;
+    gap: var(--gap-md);
+    margin-top: var(--padding-md);
+    align-items: center;
+  }
+
+  &__action {
+    display: flex;
+    align-items: center;
+    gap: var(--gap-xs);
+    background: none;
+    border: none;
+    color: var(--color-grey);
+    font-size: var(--fs-xs);
+    cursor: pointer;
+    padding: var(--padding-xs) var(--padding-sm);
+    border-radius: var(--radius-sm);
+    transition: all 0.2s ease;
+
+    &:hover {
+      background: var(--color-grey-light);
+    }
+
+    &.liked {
+      color: var(--color-green);
+    }
+
+    &.disliked {
+      color: var(--color-red);
+    }
+  }
+
+  &__count {
+    font-size: var(--fs-xs);
+  }
+
+  &__reply {
+    margin-left: auto;
+    color: var(--color-blue-main);
+    font-size: var(--fs-xs);
+    padding: 0;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .review {
+    padding: var(--padding-md);
+
+    &__meta {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: var(--padding-xs);
+    }
+  }
+}

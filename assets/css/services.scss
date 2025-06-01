@@ -1,0 +1,118 @@
+.services {
+    padding: var(--padding-xl) 0;
+    background-color: var(--color-white);
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        gap: var(--gap-lg);
+    }
+
+    &__headline {
+        text-align: center;
+
+        &::after {
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+
+    &__grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: var(--gap-md);
+
+        @media (max-width: 767px) {
+            grid-template-columns: 1fr;
+        }
+    }
+}
+
+.service-card {
+    position: relative;
+    display: block;
+    height: auto;
+    border-radius: var(--radius-sm);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    color: var(--color-white);
+    text-decoration: none;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: var(--img-url);
+        background-size: cover;
+        background-position: center;
+        z-index: 1;
+        transition: transform 0.5s ease;
+    }
+
+    &:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+
+        &::before {
+            transform: scale(1.05);
+        }
+
+        .service-card__overlay {
+            background-color: rgba(0, 91, 170, 0.85);
+        }
+    }
+
+    &__overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.6);
+        z-index: 2;
+        transition: background-color 0.3s ease;
+    }
+
+    &__content {
+        position: relative;
+        z-index: 3;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: var(--padding-lg);
+    }
+
+    &__title {
+        color: var(--color-white);
+        font-size: var(--fs-base);
+        font-weight: 600;
+        margin: 0 0 var(--padding-xs) 0;
+        line-height: var(--lh-md);
+    }
+
+    &__price {
+        font-size: var(--fs-md);
+        font-weight: 700;
+        color: var(--color-orange);
+    }
+
+    @media (max-width: 1023px) {
+        height: 180px;
+
+        &__content {
+            padding: var(--padding-md);
+        }
+
+        &__title {
+            font-size: var(--fs-sm);
+        }
+
+        &__price {
+            font-size: var(--fs-base);
+        }
+    }
+}
