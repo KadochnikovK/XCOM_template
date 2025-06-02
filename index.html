@@ -248,6 +248,16 @@
           <div class="swiper-slide">
             <div class="goods__item">
               <div class="goods__header">
+                <div class="goods__meta">
+                  <div class="goods__rating" data-product-id="1">
+                    <i class="fa-solid fa-star" style="color: var(--color-orange)"></i>
+                    <span>4.8</span>
+                  </div>
+                  <div class="goods__reviews" data-product-id="1">
+                    <i class="fa-solid fa-comment"></i>
+                    <span>12</span>
+                  </div>
+                </div>
                 <img class="goods__image" src="assets/images/pc1.png" alt="" />
                 <p class="goods__headline headline">Настольные компьютеры</p>
               </div>
@@ -256,10 +266,24 @@
               <p class="goods__text">Возможность установить дополнительный M.2 SSD.</p>
               <p class="goods__text">Совместимость с процессорами Intel Core 14-го поколения и памятью DDR5.</p>
               <p class="goods__text goods__price">от 30 000 ₽</p>
+              <button class="button button--main">
+                Запросить расчет
+              </button>
+
             </div>
           </div>
           <div class="swiper-slide">
             <div class="goods__item">
+              <div class="goods__meta">
+                <div class="goods__rating" data-product-id="1">
+                  <i class="fa-solid fa-star" style="color: var(--color-orange)"></i>
+                  <span>4.8</span>
+                </div>
+                <div class="goods__reviews" data-product-id="1">
+                  <i class="fa-solid fa-comment"></i>
+                  <span>12</span>
+                </div>
+              </div>
               <div class="goods__header">
                 <img class="goods__image" src="assets/images/pc2.png" alt="" />
                 <p class="goods__headline headline">Компактные компьютеры</p>
@@ -270,10 +294,23 @@
               <p class="goods__text">Может использоваться с данными, составляющими государственную тайну.</p>
               <p class="goods__text">Отечественные ОС и поддержка российского BIOS.</p>
               <p class="goods__text goods__price">от 40 000 ₽</p>
+              <button class="button button--main">
+                Запросить расчет
+              </button>
             </div>
           </div>
           <div class="swiper-slide">
             <div class="goods__item">
+              <div class="goods__meta">
+                <div class="goods__rating" data-product-id="1">
+                  <i class="fa-solid fa-star" style="color: var(--color-orange)"></i>
+                  <span>4.8</span>
+                </div>
+                <div class="goods__reviews" data-product-id="1">
+                  <i class="fa-solid fa-comment"></i>
+                  <span>12</span>
+                </div>
+              </div>
               <div class="goods__header">
                 <img class="goods__image" src="assets/images/pc3.png" alt="" />
                 <p class="goods__headline headline">Рабочие станции</p>
@@ -284,16 +321,12 @@
               <p class="goods__text">Разработана специально для специалистов, работающих с тяжёлыми задачами и сложными
                 расчётами.</p>
               <p class="goods__text goods__price">от 50 000 ₽</p>
+              <button class="button button--main">
+                Запросить расчет
+              </button>
             </div>
           </div>
         </div>
-      </div>
-    </div>
-    <div class="tagline tagline--left-bottom tagline--gradient-bottom container"
-      style="--img-url: url('./images/tagline-bg-2.png')">
-      <div class="tagline__content content">
-        <p class="tagline__text">Погрузитесь в мир<br />технологической <span class="orange">мощи</span> и <span
-            class="orange">стиля</span></p>
       </div>
     </div>
     <div class="reviews container">
@@ -489,6 +522,14 @@
         </button>
       </div>
     </div>
+    <div class="tagline tagline--left-bottom tagline--gradient-bottom container"
+      style="--img-url: url('./images/tagline-bg-2.png')">
+      <div class="tagline__content content">
+        <p class="tagline__text">Погрузитесь в мир<br />технологической <span class="orange">мощи</span> и <span
+            class="orange">стиля</span></p>
+      </div>
+    </div>
+
     <a id="for-whom"></a>
     <div class="info container">
       <div class="info__content content">
@@ -831,7 +872,7 @@
       </div>
     </div>
   </div>
-  <script src="./assets/script.js"></script>
+  <script src="./assets/script.js" defer></script>
 </body>
 
 </html>
