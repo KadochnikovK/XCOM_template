@@ -307,6 +307,27 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
+document.addEventListener('DOMContentLoaded', function () {
+  const questions = document.querySelectorAll('.faq-item__question');
+
+  questions.forEach(question => {
+    question.addEventListener('click', function () {
+      const item = this.closest('.faq-item');
+      const answer = item.querySelector('.faq-item__answer');
+
+      document.querySelectorAll('.faq-item__answer').forEach(ans => {
+        if (ans !== answer) {
+          ans.classList.remove('active');
+          ans.previousElementSibling.classList.remove('active');
+        }
+      });
+
+      this.classList.toggle('active');
+      answer.classList.toggle('active');
+    });
+  });
+});
+
 const reviews = document.querySelector("#reviews");
 
 reviews.style.display = "none";
