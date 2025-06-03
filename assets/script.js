@@ -336,7 +336,7 @@ const goodsMeta = document.querySelectorAll(".goods__meta");
 goodsMeta.forEach((good) => {
   good.addEventListener("click", function () {
     console.log(reviews);
-    reviews.style.display = "block";
+    reviews.style.display = "flex";
     if (reviews) {
       reviews.scrollIntoView({
         behavior: "smooth",
