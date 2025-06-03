@@ -1,878 +1,694 @@
 <!DOCTYPE html>
 <html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="./assets/plugins/swiper/swiper.js"></script>
+    <script src="https://kit.fontawesome.com/19aecd2cb6.js" crossorigin="anonymous"></script>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <script src="./assets/plugins/swiper/swiper.js"></script>
-  <script src="https://kit.fontawesome.com/19aecd2cb6.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./assets/plugins/swiper/swiper.css" />
+    <link rel="stylesheet" href="./assets/css/animations/animations.css" />
+    <link rel="stylesheet" href="./assets/style.css" />
+    <link type="Image/x-icon" href="./assets/images/favicon.png" rel="icon" />
+    <title>Настольные компьютеры Aquarius от XCOM</title>
+  </head>
 
-  <link rel="stylesheet" href="./assets/plugins/swiper/swiper.css" />
-  <link rel="stylesheet" href="./assets/css/animations/animations.css" />
-  <link rel="stylesheet" href="./assets/style.css" />
-  <link type="Image/x-icon" href="./assets/images/favicon.png" rel="icon" />
-  <title>Настольные компьютеры Aquarius от XCOM</title>
-</head>
-
-<body>
-  <header class="header container">
-    <div class="header__content content">
-      <div class="header__item">
-        <a href="https://www.xcom.ru/" class="logo">
-          <img class="logo__img" src="./assets/images/logo.svg" alt="XCOM" />
-        </a>
-        <nav class="header__menu">
-          <a href="#tasks" class="header__link">Решаемые задачи</a>
-          <a href="#why" class="header__link">Почему Aquarius?</a>
-          <a href="#solution" class="header__link">Выберите своё решение</a>
-          <a href="#contacts" class="header__link">Контакты</a>
-          <a href="#offer" class="header__link header__link--main">Оставить заявку</a>
-        </nav>
-      </div>
-
-      <div class="header__item">
-        <a href="tel:+74952605861" class="header__button button button--main">
-          <img src="./assets/images/phone.svg" alt="" />
-          +7 (495) 260 58 61
-        </a>
-      </div>
-      <div class="header__item">
-        <div class="header__hamburger">
-          <span></span>
-          <span></span>
-          <span></span>
+  <body>
+    <header class="header container">
+      <div class="header__content content">
+        <div class="header__item">
+          <a href="https://www.xcom.ru/" class="logo">
+            <img class="logo__img" src="./assets/images/logo.svg" alt="XCOM" />
+          </a>
+          <nav class="header__menu">
+            <a href="#tasks" class="header__link">Решаемые задачи</a>
+            <a href="#why" class="header__link">Почему Aquarius?</a>
+            <a href="#solution" class="header__link">Выберите своё решение</a>
+            <a href="#contacts" class="header__link">Контакты</a>
+            <a href="#form" class="header__link header__link--main">Оставить заявку</a>
+          </nav>
         </div>
-      </div>
-    </div>
-  </header>
-  <main class="main">
-    <div class="breadcrumbs container">
-      <div class="breadcrumbs__content content">
-        <nav class="breadcrumbs__nav">
-          <a href="#" class="breadcrumbs__link">Компьютеры и ноутбуки</a>
-          <span class="breadcrumbs__separator">•</span>
-          <a href="#" class="breadcrumbs__link">Ноутбуки</a>
-          <span class="breadcrumbs__separator">•</span>
-          <a href="#" class="breadcrumbs__link">Диагональ от 13″ до 14,5″</a>
-          <span class="breadcrumbs__separator">•</span>
-          <a href="#" class="breadcrumbs__link">Huawei</a>
-          <span class="breadcrumbs__separator">•</span>
-          <span class="breadcrumbs__current">Ноутбук Huawei MateBook D 14 MDF-X в Перми 14″. Core I3, 8 Гб RAM, 256 Гб
-            SSD, UHD Graphics, Серый</span>
-        </nav>
-      </div>
-    </div>
-    <a id="main"></a>
-    <!-- <div class="offer offer--main container">
-      <div class="offer__content content">
-        <div class="offer__text">
-          <h1 class="offer__headline animate__fadeInLeft animate__animated" style="--animate-duration: 0.5s">
-            Работайте <span class="orange">быстрее</span> и <span class="orange">эффективнее</span>
-          </h1>
-          <div class="collage collage--mobile">
-            <div class="collage__bg">
-              <img class="collage__background animate__fadeInUp animate__animated" style="--animate-duration: 0.4s"
-                src="./assets/images/bg.png" alt="bg" />
-              <img class="collage__item animate__fadeInUp animate__animated animate__delay-2s"
-                style="--animate-duration: 0.2s; --animate-delay: 0.3s; --width: auto; --height: auto; --top: 90%; --left: -5%; z-index: 2"
-                src="./assets/images/item.svg" alt="item" />
-              <img class="collage__item animate__fadeInUp animate__animated animate__delay-2s"
-                style="--animate-duration: 0.2s; --animate-delay: 0.4s; --width: auto; --height: auto; --top: 5%; --left: 90%; z-index: 0"
-                src="./assets/images/item.svg" alt="item" />
-            </div>
 
-            <div class="collage__computer">
-              <img class="collage__shadow animate__fadeInUp animate__animated animate__delay-2s"
-                style="--animate-duration: 0.3s; --animate-delay: 0.2s" src="assets/images/shadow.svg" alt="shadow" />
-              <img class="collage__comp animate__fadeInUp animate__animated animate__delay-2s"
-                style="--animate-duration: 0.3s; --animate-delay: 0.2s" src="./assets/images/computer-2.png"
-                alt="comp" />
-            </div>
+        <div class="header__item">
+          <a href="tel:+74952605861" class="header__button button button--main">
+            <img src="./assets/images/phone.svg" alt="" />
+            +7 (495) 260 58 61
+          </a>
+        </div>
+        <div class="header__item">
+          <div class="header__hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
           </div>
-          <p class="offer__papagraph paragraph animate__fadeInLeft animate__animated animate__delay-2s"
-            style="--animate-duration: 0.5s; --animate-delay: 0.3s">
-            Настольные компьютеры Aquarius представляют собой высокопроизводительные устройства, предназначенные как для
-            домашних пользователей, так и специалистов
-          </p>
         </div>
-        <div class="offer__image">
-          <div class="collage collage--full">
-            <div class="collage__bg">
-              <img class="collage__background animate__fadeInUp animate__animated" style="--animate-duration: 0.4s"
-                src="./assets/images/bg.png" alt="bg" />
-              <img class="collage__item animate__fadeInUp animate__animated animate__delay-2s"
-                style="--animate-duration: 0.2s; --animate-delay: 0.3s; --width: auto; --height: auto; --top: 90%; --left: -5%; z-index: 2"
-                src="./assets/images/item.svg" alt="item" />
-              <img class="collage__item animate__fadeInUp animate__animated animate__delay-2s"
-                style="--animate-duration: 0.2s; --animate-delay: 0.4s; --width: auto; --height: auto; --top: 5%; --left: 90%; z-index: 0"
-                src="./assets/images/item.svg" alt="item" />
-            </div>
+      </div>
+    </header>
+    <main class="main">
+      <div class="breadcrumbs container">
+        <div class="breadcrumbs__content content">
+          <nav class="breadcrumbs__nav">
+            <a href="#" class="breadcrumbs__link">Компьютеры и ноутбуки</a>
+            <span class="breadcrumbs__separator">•</span>
+            <a href="#" class="breadcrumbs__link">Ноутбуки</a>
+            <span class="breadcrumbs__separator">•</span>
+            <a href="#" class="breadcrumbs__link">Диагональ от 13″ до 14,5″</a>
+            <span class="breadcrumbs__separator">•</span>
+            <a href="#" class="breadcrumbs__link">Huawei</a>
+            <span class="breadcrumbs__separator">•</span>
+            <span class="breadcrumbs__current">Ноутбук Huawei MateBook D 14 MDF-X в Перми 14″. Core I3, 8 Гб RAM, 256 Гб SSD, UHD Graphics, Серый</span>
+          </nav>
+        </div>
+      </div>
 
-            <div class="collage__computer">
-              <img class="collage__shadow animate__fadeInUp animate__animated animate__delay-2s"
-                style="--animate-duration: 0.3s; --animate-delay: 0.2s" src="assets/images/shadow.svg" alt="shadow" />
-              <img class="collage__comp animate__fadeInUp animate__animated animate__delay-2s"
-                style="--animate-duration: 0.3s; --animate-delay: 0.2s" src="./assets/images/computer-2.png"
-                alt="comp" />
+      <div class="hero container" id="offer">
+        <div class="hero__content content">
+          <div class="hero__text">
+            <h1 class="hero__headline">Работайте <span class="orange">быстрее</span> и <span class="orange">эффективнее</span></h1>
+            <p class="hero__description">Настольные компьютеры Aquarius представляют собой высокопроизводительные устройства, предназначенные как для домашних пользователей, так и специалистов</p>
+          </div>
+          <div class="hero__image">
+            <img src="./assets/images/tagline-bg-1.png" alt="Компьютер Aquarius" loading="lazy" />
+          </div>
+        </div>
+      </div>
+      <a></a>
+      <div class="bullets container" id="description">
+        <div class="bullets__content content">
+          <div class="bullets__grid">
+            <div class="bullets__item bullets__item--sm">
+              Оборудование оснащено современными комплектующими, что <span class="orange">обеспечивает стабильную работу</span> в офисных приложениях, играх и мультимедийных задачах.
+            </div>
+            <div class="bullets__item">
+              Дизайн компьютеров отличается <span class="orange">элегантностью</span> и <span class="orange">функциональностью</span>, а также возможностью <span class="orange">модернизации</span>,
+              что делает их привлекательным выбором для тех, кто ценит не только <span class="orange">качество</span> и <span class="orange">надежность</span>, но и
+              <span class="orange">красоту</span>.
             </div>
           </div>
         </div>
       </div>
-    </div> -->
-    <div class="hero container">
-      <div class="hero__content content">
-        <div class="hero__text">
-          <h1 class="hero__headline">Работайте <span class="orange">быстрее</span> и <span
-              class="orange">эффективнее</span></h1>
-          <p class="hero__description">
-            Настольные компьютеры Aquarius представляют собой высокопроизводительные устройства, предназначенные как для
-            домашних пользователей, так и специалистов
-          </p>
-        </div>
-        <div class="hero__image">
-          <img src="./assets/images/tagline-bg-1.png" alt="Компьютер Aquarius" loading="lazy">
-        </div>
-      </div>
-    </div>
-    <a id="about"></a>
-    <div class="bullets container">
-      <div class="bullets__content content">
-        <div class="bullets__grid">
-          <div class="bullets__item bullets__item--sm">
-            Оборудование оснащено современными комплектующими, что <span class="orange">обеспечивает стабильную
-              работу</span> в офисных приложениях, играх и мультимедийных задачах.
-          </div>
-          <div class="bullets__item">
-            Дизайн компьютеров отличается <span class="orange">элегантностью</span> и <span
-              class="orange">функциональностью</span>, а также возможностью <span class="orange">модернизации</span>,
-            что делает их привлекательным выбором для тех, кто ценит не только <span class="orange">качество</span> и
-            <span class="orange">надежность</span>, но и
-            <span class="orange">красоту</span>.
-          </div>
-        </div>
-      </div>
-    </div>
-    <a id="tasks"></a>
-    <div class="bullets container">
-      <div class="bullets__content bullets__content--extra-padding content">
-        <h2 class="headline">Решаемые задачи</h2>
-        <div class="bullets__grid">
-          <div class="bullets__item bullets__item--variant"><img class="bullets__icon" src="assets/images/check.svg"
-              alt="✔" />Для экономии рабочего пространства</div>
-          <div class="bullets__item bullets__item--variant"><img class="bullets__icon" src="assets/images/check.svg"
-              alt="✔" />Для офисных сотрудников</div>
-          <div class="bullets__item bullets__item--variant"><img class="bullets__icon" src="assets/images/check.svg"
-              alt="✔" />Для безопасных вычислений</div>
-          <div class="bullets__item bullets__item--variant"><img class="bullets__icon" src="assets/images/check.svg"
-              alt="✔" />Для государственных служащих</div>
-          <div class="bullets__item bullets__item--variant"><img class="bullets__icon" src="assets/images/check.svg"
-              alt="✔" />Для офисных Для удаленного доступа к инфраструктуре VDI</div>
-          <div class="bullets__item bullets__item--variant"><img class="bullets__icon" src="assets/images/check.svg"
-              alt="✔" />Для удаленного доступа к терминальной инфраструктуре</div>
-        </div>
-      </div>
-    </div>
-    <div class="tagline container" style="--img-url: url('./images/tagline-bg-1.png')">
-      <div class="tagline__content content">
-        <p class="tagline__text"><span class="poligon-bg">ГК XCOM</span> — лидер в поставках и интеграции
-          IT&#8209;решений</p>
-      </div>
-    </div>
-    <a id="why"></a>
-    <!-- <div class="offer container">
-      <div class="offer__content content">
-        <div class="offer__text">
-          <h2 class="headline">Почему выбирают Aquarius?</h2>
-          <p class="offer__papagraph paragraph"><img src="./assets/images/microchip.svg" alt="✔" /> Современные
-            компоненты</p>
-          <p class="offer__papagraph paragraph"><img src="./assets/images/web.svg" alt="✔" /> Индивидуальный подход</p>
-          <p class="offer__papagraph paragraph"><img src="./assets/images/bolt.svg" alt="✔" /> Эстетика и
-            функциональность</p>
-          <p class="offer__papagraph paragraph"><img src="./assets/images/shield.svg" alt="✔" /> Поддержка и гарантии
-          </p>
-        </div>
-        <div class="offer__image">
-          <div class="collage">
-            <div class="collage__bg">
-          
-            </div>
-            <div class="collage__computer">
-              <img class="collage__item animate__fadeInUp animate__animated animate__delay-2s"
-                style="--animate-duration: 0.2s; --animate-delay: 0.3s; --width: 200px; --height: auto; --top: 55%; --left: 5%; z-index: 0"
-                src="./assets/images/item.svg" alt="item" />
-              <img class="collage__item animate__fadeInUp animate__animated animate__delay-2s"
-                style="--animate-duration: 0.2s; --animate-delay: 0.4s; --width: auto; --height: auto; --top: 15%; --left: 70%; z-index: 2"
-                src="./assets/images/item.svg" alt="item" />
-              <img class="collage__comp animate__fadeInUp animate__animated animate__delay-2s"
-                style="--animate-duration: 0.3s; --animate-delay: 0.2s" src="./assets/images/computer-2.png"
-                alt="comp" />
-            </div>
-          </div>
-        </div>
-      </div>
-    </div> -->
-    <div class="features container">
-      <div class="features__content content">
-        <div class="features__image">
-          <img src="./assets/images/tagline-bg-1.png" alt="Преимущества Aquarius" loading="lazy">
-        </div>
-        <div class="features__text">
-          <h2 class="features__headline headline">Почему выбирают Aquarius?</h2>
-          <ul class="features__list">
-            <li class="features__item">
-              <i class="fa-solid fa-microchip"></i>
-              <span>Современные компоненты</span>
-            </li>
-            <li class="features__item">
-              <i class="fa-solid fa-globe"></i>
-              <span>Индивидуальный подход</span>
-            </li>
-            <li class="features__item">
-              <i class="fa-solid fa-bolt"></i>
-              <span>Эстетика и функциональность</span>
-            </li>
-            <li class="features__item">
-              <i class="fa-solid fa-shield-halved"></i>
-              <span>Поддержка и гарантии</span>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
 
-    <a id="solution"></a>
-    <div class="goods container">
-      <div class="goods__content content swiper">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide">
-            <div class="goods__item">
-              <div class="goods__header">
-                <div class="goods__meta">
-                  <div class="goods__rating" data-product-id="1">
+      <div class="bullets container" id="tasks">
+        <div class="bullets__content bullets__content--extra-padding content">
+          <h2 class="headline">Решаемые задачи</h2>
+          <div class="bullets__grid">
+            <div class="bullets__item bullets__item--variant"><img class="bullets__icon" src="assets/images/check.svg" alt="✔" />Для экономии рабочего пространства</div>
+            <div class="bullets__item bullets__item--variant"><img class="bullets__icon" src="assets/images/check.svg" alt="✔" />Для офисных сотрудников</div>
+            <div class="bullets__item bullets__item--variant"><img class="bullets__icon" src="assets/images/check.svg" alt="✔" />Для безопасных вычислений</div>
+            <div class="bullets__item bullets__item--variant"><img class="bullets__icon" src="assets/images/check.svg" alt="✔" />Для государственных служащих</div>
+            <div class="bullets__item bullets__item--variant"><img class="bullets__icon" src="assets/images/check.svg" alt="✔" />Для офисных Для удаленного доступа к инфраструктуре VDI</div>
+            <div class="bullets__item bullets__item--variant"><img class="bullets__icon" src="assets/images/check.svg" alt="✔" />Для удаленного доступа к терминальной инфраструктуре</div>
+          </div>
+        </div>
+      </div>
+      <div class="tagline container" style="--img-url: url('./images/tagline-bg-1.png')">
+        <div class="tagline__content content">
+          <p class="tagline__text"><span class="poligon-bg">ГК XCOM</span> — лидер в поставках и интеграции IT&#8209;решений</p>
+        </div>
+      </div>
+
+      <div class="features container" id="why">
+        <div class="features__content content">
+          <div class="features__image">
+            <img src="./assets/images/tagline-bg-1.png" alt="Преимущества Aquarius" loading="lazy" />
+          </div>
+          <div class="features__text">
+            <h2 class="features__headline headline">Почему выбирают Aquarius?</h2>
+            <ul class="features__list">
+              <li class="features__item">
+                <i class="fa-solid fa-microchip"></i>
+                <span>Современные компоненты</span>
+              </li>
+              <li class="features__item">
+                <i class="fa-solid fa-globe"></i>
+                <span>Индивидуальный подход</span>
+              </li>
+              <li class="features__item">
+                <i class="fa-solid fa-bolt"></i>
+                <span>Эстетика и функциональность</span>
+              </li>
+              <li class="features__item">
+                <i class="fa-solid fa-shield-halved"></i>
+                <span>Поддержка и гарантии</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="goods container" id="solution">
+        <div class="goods__content content swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="goods__item">
+                <div class="goods__header">
+                  <div class="goods__meta" data-product-id="1">
+                    <div class="goods__rating">
+                      <i class="fa-solid fa-star" style="color: var(--color-orange)"></i>
+                      <span>4.8</span>
+                    </div>
+                    <div class="goods__reviews">
+                      <i class="fa-solid fa-comment"></i>
+                      <span>12</span>
+                    </div>
+                  </div>
+                  <img class="goods__image" src="assets/images/pc1.png" alt="" />
+                  <p class="goods__headline headline">Настольные компьютеры</p>
+                </div>
+                <p class="goods__text">Просторный корпус 36 л — подходит для топовых CPU и видеокарт.</p>
+                <p class="goods__text">До 3 цифровых видеовыходов (HDMI + DisplayPort).</p>
+                <p class="goods__text">Возможность установить дополнительный M.2 SSD.</p>
+                <p class="goods__text">Совместимость с процессорами Intel Core 14-го поколения и памятью DDR5.</p>
+                <p class="goods__text goods__price">от 30 000 ₽</p>
+                <button class="button button--main">Запросить расчет</button>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="goods__item">
+                <div class="goods__meta" data-product-id="2">
+                  <div class="goods__rating">
                     <i class="fa-solid fa-star" style="color: var(--color-orange)"></i>
                     <span>4.8</span>
                   </div>
-                  <div class="goods__reviews" data-product-id="1">
+                  <div class="goods__reviews">
                     <i class="fa-solid fa-comment"></i>
                     <span>12</span>
                   </div>
                 </div>
-                <img class="goods__image" src="assets/images/pc1.png" alt="" />
-                <p class="goods__headline headline">Настольные компьютеры</p>
+                <div class="goods__header">
+                  <img class="goods__image" src="assets/images/pc2.png" alt="" />
+                  <p class="goods__headline headline">Компактные компьютеры</p>
+                </div>
+                <p class="goods__text">Компактный форм-фактор с креплением VESA.</p>
+                <p class="goods__text">Совместимость с процессорами Intel Core 14-го поколения.</p>
+                <p class="goods__text">Mobile Rack 2.5" на лицевой панели.</p>
+                <p class="goods__text">Может использоваться с данными, составляющими государственную тайну.</p>
+                <p class="goods__text">Отечественные ОС и поддержка российского BIOS.</p>
+                <p class="goods__text goods__price">от 40 000 ₽</p>
+                <button class="button button--main">Запросить расчет</button>
               </div>
-              <p class="goods__text">Просторный корпус 36 л — подходит для топовых CPU и видеокарт.</p>
-              <p class="goods__text">До 3 цифровых видеовыходов (HDMI + DisplayPort).</p>
-              <p class="goods__text">Возможность установить дополнительный M.2 SSD.</p>
-              <p class="goods__text">Совместимость с процессорами Intel Core 14-го поколения и памятью DDR5.</p>
-              <p class="goods__text goods__price">от 30 000 ₽</p>
-              <button class="button button--main">
-                Запросить расчет
-              </button>
-
             </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="goods__item">
-              <div class="goods__meta">
-                <div class="goods__rating" data-product-id="1">
-                  <i class="fa-solid fa-star" style="color: var(--color-orange)"></i>
-                  <span>4.8</span>
+            <div class="swiper-slide">
+              <div class="goods__item" data-product-id="3">
+                <div class="goods__meta">
+                  <div class="goods__rating">
+                    <i class="fa-solid fa-star" style="color: var(--color-orange)"></i>
+                    <span>4.8</span>
+                  </div>
+                  <div class="goods__reviews">
+                    <i class="fa-solid fa-comment"></i>
+                    <span>12</span>
+                  </div>
                 </div>
-                <div class="goods__reviews" data-product-id="1">
-                  <i class="fa-solid fa-comment"></i>
-                  <span>12</span>
+                <div class="goods__header">
+                  <img class="goods__image" src="assets/images/pc3.png" alt="" />
+                  <p class="goods__headline headline">Рабочие станции</p>
                 </div>
+                <p class="goods__text">Подходит для 3D-графики, CAD-систем, финансового моделирования</p>
+                <p class="goods__text">Возможность установки дискретных GPU высокого уровня</p>
+                <p class="goods__text">Пространство и интерфейсы для подключения нескольких накопителей</p>
+                <p class="goods__text">Разработана специально для специалистов, работающих с тяжёлыми задачами и сложными расчётами.</p>
+                <p class="goods__text goods__price">от 50 000 ₽</p>
+                <button class="button button--main">Запросить расчет</button>
               </div>
-              <div class="goods__header">
-                <img class="goods__image" src="assets/images/pc2.png" alt="" />
-                <p class="goods__headline headline">Компактные компьютеры</p>
-              </div>
-              <p class="goods__text">Компактный форм-фактор с креплением VESA.</p>
-              <p class="goods__text">Совместимость с процессорами Intel Core 14-го поколения.</p>
-              <p class="goods__text">Mobile Rack 2.5" на лицевой панели.</p>
-              <p class="goods__text">Может использоваться с данными, составляющими государственную тайну.</p>
-              <p class="goods__text">Отечественные ОС и поддержка российского BIOS.</p>
-              <p class="goods__text goods__price">от 40 000 ₽</p>
-              <button class="button button--main">
-                Запросить расчет
-              </button>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="goods__item">
-              <div class="goods__meta">
-                <div class="goods__rating" data-product-id="1">
-                  <i class="fa-solid fa-star" style="color: var(--color-orange)"></i>
-                  <span>4.8</span>
-                </div>
-                <div class="goods__reviews" data-product-id="1">
-                  <i class="fa-solid fa-comment"></i>
-                  <span>12</span>
-                </div>
-              </div>
-              <div class="goods__header">
-                <img class="goods__image" src="assets/images/pc3.png" alt="" />
-                <p class="goods__headline headline">Рабочие станции</p>
-              </div>
-              <p class="goods__text">Подходит для 3D-графики, CAD-систем, финансового моделирования</p>
-              <p class="goods__text">Возможность установки дискретных GPU высокого уровня</p>
-              <p class="goods__text">Пространство и интерфейсы для подключения нескольких накопителей</p>
-              <p class="goods__text">Разработана специально для специалистов, работающих с тяжёлыми задачами и сложными
-                расчётами.</p>
-              <p class="goods__text goods__price">от 50 000 ₽</p>
-              <button class="button button--main">
-                Запросить расчет
-              </button>
             </div>
           </div>
         </div>
       </div>
-    </div>
-    <div class="reviews container">
-      <div class="reviews__content content">
-        <h2 class="reviews__headline headline">Отзывы</h2>
+      <div class="reviews container" id="reviews">
+        <div class="reviews__content content">
+          <h2 class="reviews__headline headline">Отзывы</h2>
 
-        <div class="reviews__wrapper">
-          <div class="rating">
-            <h3 class="rating__title">Общий рейтинг на основе 3 отзыва</h3>
+          <div class="reviews__wrapper">
+            <div class="rating">
+              <h3 class="rating__title">Общий рейтинг на основе 3 отзыва</h3>
 
-            <div class="rating__stars">
-              <div class="rating__star">
-                <i class="fa-solid fa-star"></i> 5
-                <div class="rating__bar">
-                  <div class="rating__bar-fill" style="width: 100%"></div>
+              <div class="rating__stars">
+                <div class="rating__star">
+                  <i class="fa-solid fa-star"></i> 5
+                  <div class="rating__bar">
+                    <div class="rating__bar-fill" style="width: 100%"></div>
+                  </div>
+                  <span class="rating__count">3</span>
                 </div>
-                <span class="rating__count">3</span>
-              </div>
-              <div class="rating__star">
-                <i class="fa-solid fa-star"></i> 4
-                <div class="rating__bar">
-                  <div class="rating__bar-fill" style="width: 0%"></div>
+                <div class="rating__star">
+                  <i class="fa-solid fa-star"></i> 4
+                  <div class="rating__bar">
+                    <div class="rating__bar-fill" style="width: 0%"></div>
+                  </div>
+                  <span class="rating__count">0</span>
                 </div>
-                <span class="rating__count">0</span>
-              </div>
-              <div class="rating__star">
-                <i class="fa-solid fa-star"></i> 3
-                <div class="rating__bar">
-                  <div class="rating__bar-fill" style="width: 0%"></div>
+                <div class="rating__star">
+                  <i class="fa-solid fa-star"></i> 3
+                  <div class="rating__bar">
+                    <div class="rating__bar-fill" style="width: 0%"></div>
+                  </div>
+                  <span class="rating__count">0</span>
                 </div>
-                <span class="rating__count">0</span>
-              </div>
-              <div class="rating__star">
-                <i class="fa-solid fa-star"></i> 2
-                <div class="rating__bar">
-                  <div class="rating__bar-fill" style="width: 0%"></div>
+                <div class="rating__star">
+                  <i class="fa-solid fa-star"></i> 2
+                  <div class="rating__bar">
+                    <div class="rating__bar-fill" style="width: 0%"></div>
+                  </div>
+                  <span class="rating__count">0</span>
                 </div>
-                <span class="rating__count">0</span>
-              </div>
-              <div class="rating__star">
-                <i class="fa-solid fa-star"></i> 1
-                <div class="rating__bar">
-                  <div class="rating__bar-fill" style="width: 0%"></div>
+                <div class="rating__star">
+                  <i class="fa-solid fa-star"></i> 1
+                  <div class="rating__bar">
+                    <div class="rating__bar-fill" style="width: 0%"></div>
+                  </div>
+                  <span class="rating__count">0</span>
                 </div>
-                <span class="rating__count">0</span>
               </div>
             </div>
-          </div>
 
-
-          <div class="reviews__list">
-
-            <div class="review">
-              <div class="review__header">
-                <div class="review__user">
-                  <div class="review__avatar" style="background-color: #f27028">M</div>
-                  <div class="review__info">
-                    <h3 class="review__author">Маftuna</h3>
-                    <div class="review__meta">
-                      <span class="review__date">23 марта 2025</span>
-                      <div class="review__user-rating">
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
+            <div class="reviews__list">
+              <div class="review">
+                <div class="review__header">
+                  <div class="review__user">
+                    <div class="review__avatar" style="background-color: #f27028">M</div>
+                    <div class="review__info">
+                      <h3 class="review__author">Маftuna</h3>
+                      <div class="review__meta">
+                        <span class="review__date">23 марта 2025</span>
+                        <div class="review__user-rating">
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
-              </div>
 
-              <div class="review__body">
-                <div class="review__comment">
-                  <p>Супер класс</p>
-                </div>
+                <div class="review__body">
+                  <div class="review__comment">
+                    <p>Супер класс</p>
+                  </div>
 
-                <div class="review__actions">
-                  <button class="review__action">
-                    <i class="fa-solid fa-thumbs-up" style="color: var(--color-blue-main); margin-right: 10px;"></i>
-                    <span class="review__count">12</span>
-                  </button>
-                  <button class="review__action">
-                    <i class="fa-solid fa-thumbs-down" style="color: var(--color-blue-main); margin-right: 10px;"></i>
-                    <span class="review__count">2</span>
-                  </button>
-                  <a href='' class="review__reply">
-                    Ответить
-                  </a>
-                </div>
-              </div>
-            </div>
-
-
-            <div class="review">
-              <div class="review__header">
-                <div class="review__user">
-                  <div class="review__avatar" style="background-color: #1a7bbf">С</div>
-                  <div class="review__info">
-                    <h3 class="review__author">Светлана</h3>
-                    <div class="review__meta">
-                      <span class="review__date">31 января 2025</span>
-                      <div class="review__user-rating">
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                      </div>
-                    </div>
+                  <div class="review__actions">
+                    <button class="review__action">
+                      <i class="fa-solid fa-thumbs-up" style="color: var(--color-blue-main); margin-right: 10px"></i>
+                      <span class="review__count">12</span>
+                    </button>
+                    <button class="review__action">
+                      <i class="fa-solid fa-thumbs-down" style="color: var(--color-blue-main); margin-right: 10px"></i>
+                      <span class="review__count">2</span>
+                    </button>
+                    <a href="" class="review__reply"> Ответить </a>
                   </div>
                 </div>
               </div>
 
-              <div class="review__body">
-                <div class="review__pros">
-                  <h4 class="review__subtitle">Достоинства</h4>
-                  <p>Очень отличный</p>
-                </div>
-
-                <div class="review__cons">
-                  <h4 class="review__subtitle">Недостатки</h4>
-                  <p>Недостаток не заметила</p>
-                </div>
-
-                <div class="review__comment">
-                  <h4 class="review__subtitle">Комментарий</h4>
-                  <p>Мне очень понравился магазин, выбор большой. А особенно отличный ноутбук Huawei MateBook D И MDF-X
-                    S903BHL i3 12ISU/8GB/256GB SSD(UID graphics/1x: FHD IPS/WiFi/BTeam/WimII)iemeбарсе gray.Bcow буду
-                    советовать.</p>
-                </div>
-
-                <div class="review__actions">
-                  <button class="review__action">
-                    <i class="fa-solid fa-thumbs-up" style="color: var(--color-blue-main); margin-right: 10px;"></i>
-                    <span class="review__count">8</span>
-                  </button>
-                  <button class="review__action">
-                    <i class="fa-solid fa-thumbs-down" style="color: var(--color-blue-main); margin-right: 10px;"></i>
-                    <span class="review__count">0</span>
-                  </button>
-                  <a href='' class="review__reply">
-                    Ответить
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div class="review">
-              <div class="review__header">
-                <div class="review__user">
-                  <div class="review__avatar" style="background-color: #f27028">M</div>
-                  <div class="review__info">
-                    <h3 class="review__author">Михаил</h3>
-                    <div class="review__meta">
-                      <span class="review__date">22 января 2025</span>
-                      <div class="review__user-rating">
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
+              <div class="review">
+                <div class="review__header">
+                  <div class="review__user">
+                    <div class="review__avatar" style="background-color: #1a7bbf">С</div>
+                    <div class="review__info">
+                      <h3 class="review__author">Светлана</h3>
+                      <div class="review__meta">
+                        <span class="review__date">31 января 2025</span>
+                        <div class="review__user-rating">
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
-              </div>
 
-              <div class="review__body">
-                <div class="review__comment">
-                  <p>Мне понравилось</p>
+                <div class="review__body">
+                  <div class="review__pros">
+                    <h4 class="review__subtitle">Достоинства</h4>
+                    <p>Очень отличный</p>
+                  </div>
+
+                  <div class="review__cons">
+                    <h4 class="review__subtitle">Недостатки</h4>
+                    <p>Недостаток не заметила</p>
+                  </div>
+
+                  <div class="review__comment">
+                    <h4 class="review__subtitle">Комментарий</h4>
+                    <p>
+                      Мне очень понравился магазин, выбор большой. А особенно отличный ноутбук Huawei MateBook D И MDF-X S903BHL i3 12ISU/8GB/256GB SSD(UID graphics/1x: FHD
+                      IPS/WiFi/BTeam/WimII)iemeбарсе gray.Bcow буду советовать.
+                    </p>
+                  </div>
+
+                  <div class="review__actions">
+                    <button class="review__action">
+                      <i class="fa-solid fa-thumbs-up" style="color: var(--color-blue-main); margin-right: 10px"></i>
+                      <span class="review__count">8</span>
+                    </button>
+                    <button class="review__action">
+                      <i class="fa-solid fa-thumbs-down" style="color: var(--color-blue-main); margin-right: 10px"></i>
+                      <span class="review__count">0</span>
+                    </button>
+                    <a href="" class="review__reply"> Ответить </a>
+                  </div>
+                </div>
+              </div>
+              <div class="review">
+                <div class="review__header">
+                  <div class="review__user">
+                    <div class="review__avatar" style="background-color: #f27028">M</div>
+                    <div class="review__info">
+                      <h3 class="review__author">Михаил</h3>
+                      <div class="review__meta">
+                        <span class="review__date">22 января 2025</span>
+                        <div class="review__user-rating">
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
 
-                <div class="review__actions">
-                  <button class="review__action">
-                    <i class="fa-solid fa-thumbs-up" style="color: var(--color-blue-main); margin-right: 10px;"></i>
-                    <span class="review__count">0</span>
-                  </button>
-                  <button class="review__action">
-                    <i class="fa-solid fa-thumbs-down" style="color: var(--color-blue-main); margin-right: 10px;"></i>
-                    <span class="review__count">2</span>
-                  </button>
-                  <a href='' class="review__reply">
-                    Ответить
-                  </a>
+                <div class="review__body">
+                  <div class="review__comment">
+                    <p>Мне понравилось</p>
+                  </div>
+
+                  <div class="review__actions">
+                    <button class="review__action">
+                      <i class="fa-solid fa-thumbs-up" style="color: var(--color-blue-main); margin-right: 10px"></i>
+                      <span class="review__count">0</span>
+                    </button>
+                    <button class="review__action">
+                      <i class="fa-solid fa-thumbs-down" style="color: var(--color-blue-main); margin-right: 10px"></i>
+                      <span class="review__count">2</span>
+                    </button>
+                    <a href="" class="review__reply"> Ответить </a>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-
-        </div>
-        <button class="reviews__add button button--main">
-          <i class="fa-solid fa-pen-to-square" style="color: var(--color-white)"></i> Оставить отзыв
-        </button>
-      </div>
-    </div>
-    <div class="tagline tagline--left-bottom tagline--gradient-bottom container"
-      style="--img-url: url('./images/tagline-bg-2.png')">
-      <div class="tagline__content content">
-        <p class="tagline__text">Погрузитесь в мир<br />технологической <span class="orange">мощи</span> и <span
-            class="orange">стиля</span></p>
-      </div>
-    </div>
-
-    <a id="for-whom"></a>
-    <div class="info container">
-      <div class="info__content content">
-        <h2 class="headline">Кому подойдут эти решения</h2>
-        <p class="info__text">
-          Настольные компьютеры Aquarius созданы для динамичных и амбициозных людей, которые ценят качество,
-          производительность и стиль. Мы рады приветствовать в нашей семье различных пользователей,
-          включая
-        </p>
-        <div class="info__list">
-          <a class="button button__unclickable">
-            <img src="./assets/images/government.svg" alt="" />
-            Государственным служащим
-          </a>
-          <a class="button button__unclickable">
-            <img src="./assets/images/design.svg" alt="" />
-            Дизайнерам
-          </a>
-          <a class="button button__unclickable">
-            <img src="./assets/images/student.svg" alt="" />
-            Студентам и преподавателям
-          </a>
-          <a class="button button__unclickable">
-            <img src="./assets/images/manager.svg" alt="" />
-            Менеджерам и руководителям
-          </a>
-          <a class="button button__unclickable">
-            <img src="./assets/images/programmer.svg" alt="" />
-            Программистам
-          </a>
+          <button class="reviews__add button button--main"><i class="fa-solid fa-pen-to-square" style="color: var(--color-white)"></i> Оставить отзыв</button>
         </div>
       </div>
-    </div>
-    <div class="bullets container">
-      <div class="bullets__content bullets__content--extra-padding content">
-        <h2 class="headline">Что вы получаете</h2>
-        <div class="bullets__grid bullets__grid--sm">
-          <div class="bullets__item bullets__item--variant bullets__item--column"><img class="bullets__icon"
-              src="assets/images/rocket.svg" alt="✔" />Для экономии рабочего пространства</div>
-          <div class="bullets__item bullets__item--variant bullets__item--column"><img class="bullets__icon"
-              src="assets/images/refresh.svg" alt="✔" />Для офисных сотрудников</div>
-          <div class="bullets__item bullets__item--variant bullets__item--column"><img class="bullets__icon"
-              src="assets/images/wizard.svg" alt="✔" />Для безопасных вычислений</div>
-          <div class="bullets__item bullets__item--variant bullets__item--column"><img class="bullets__icon"
-              src="assets/images/award.svg" alt="✔" />Для государственных служащих</div>
-          <div class="bullets__item bullets__item--variant bullets__item--column">
-            <img class="bullets__icon" src="assets/images/models.svg" alt="✔" />Для офисных Для удаленного доступа к
-            инфраструктуре VDI
-          </div>
-          <div class="bullets__item bullets__item--variant bullets__item--column">
-            <img class="bullets__icon" src="assets/images/frost.svg" alt="✔" />Для удаленного доступа к терминальной
-            инфраструктуре
-          </div>
-          <div class="bullets__item bullets__item--variant bullets__item--column">
-            <img class="bullets__icon" src="assets/images/mute.svg" alt="✔" />Для удаленного доступа к терминальной
-            инфраструктуре
-          </div>
-          <div class="bullets__item bullets__item--variant bullets__item--column">
-            <img class="bullets__icon" src="assets/images/cup.svg" alt="✔" />Для удаленного доступа к терминальной
-            инфраструктуре
-          </div>
+      <div class="tagline tagline--left-bottom tagline--gradient-bottom container" style="--img-url: url('./images/tagline-bg-2.png')">
+        <div class="tagline__content content">
+          <p class="tagline__text">Погрузитесь в мир<br />технологической <span class="orange">мощи</span> и <span class="orange">стиля</span></p>
         </div>
       </div>
-    </div>
-    <a id="offer"></a>
-    <div class="container margin-bottom-sm">
-      <div class="content center">
 
-
-        <h2 class="headline headline--center">Заполните форму</h2>
-        <form class="form" id="main-form " action="#">
-          <div class="form__item">
-            <label for="company" class="form__label">Название компании</label>
-            <input type="text" class="form__input" placeholder=" " name="company" />
-          </div>
-          <div class="form__item">
-            <label for="taxId" class="form__label">ИНН</label>
-            <input type="text" class="form__input" placeholder=" " name="taxId" />
-          </div>
-          <div class="form__item">
-            <label for="description" class="form__label">Описание</label>
-            <input type="text" class="form__input" placeholder=" " name="description" />
-          </div>
-          <div class="form__item">
-            <label for="revenue" class="form__label">Выручка за 2024 год</label>
-            <input type="number" class="form__input" placeholder=" " name="revenue" />
-          </div>
-          <div class="form__item">
-            <label for="email" class="form__label">E-mail</label>
-            <input type="email" class="form__input" placeholder=" " name="email" />
-          </div>
-          <div class="form__item">
-            <label for="phone" class="form__label">Номер телефона</label>
-            <input type="number" class="form__input" placeholder=" " name="phone" />
-          </div>
-          <div class="form__item">
-            <label for="fullName" class="form__label">ФИО</label>
-            <input type="text" class="form__input" placeholder=" " name="fullName" />
-          </div>
-
-          <button type="submit" class="form__button button"><img src="assets/images/send.svg"
-              alt="" />Отправить</button>
-          <p class="note">Свяжемся с Вами в течении 10 минут</p>
-        </form>
-      </div>
-
-    </div>
-    <a id="about-us"></a>
-    <!-- <div class="offer offer--without-bg margin-top-md margin-bottom-sm container">
-      <div class="offer__content content">
-        <div class="offer__text">
-          <h2 class="headline">Почему выбирают Aquarius?</h2>
-          <p class="paragraph">
-            Входим в <span class="orange">ТОП-25 в крупнейших рейтингах</span> Мы создаем и развиваем инновационные
-            технологии, помогая бизнесу и государственным структурам повышать эффективность.
-            Наша программа M&A объединяет компании с конкурентоспособными продуктами и сильными командами, чтобы вместе
-            строить будущее российского IT-рынка.
+      <div class="info container" id="for-whom">
+        <div class="info__content content">
+          <h2 class="headline">Кому подойдут эти решения</h2>
+          <p class="info__text">
+            Настольные компьютеры Aquarius созданы для динамичных и амбициозных людей, которые ценят качество, производительность и стиль. Мы рады приветствовать в нашей семье различных пользователей,
+            включая
           </p>
-          <p class="paragraph">
-            Мы фокусируемся на <span class="orange">поддержке импортозамещения и локализации</span>, предлагая партнерам
-            доступ к нашей экосистеме, ресурсам и клиентской базе. За годы работы мы
-            реализовали <span class="orange">сотни проектов для лидеров различных отраслей</span>, укрепляя свои позиции
-            как надежный интегратор и производитель решений.
-          </p>
-        </div>
-        <div class="offer__image">
-          <div class="collage">
-            <div class="collage__bg">
-              <img class="collage__background animate__fadeInUp animate__animated" style="--animate-duration: 0.4s"
-                src="./assets/images/bg-2.png" alt="bg" />
-              <img class="collage__item animate__fadeInUp animate__animated animate__delay-2s"
-                style="--animate-duration: 0.2s; --animate-delay: 0.3s; --width: auto; --height: auto; --top: 90%; --left: -5%; z-index: 2"
-                src="./assets/images/item.svg" alt="item" />
-              <img class="collage__item animate__fadeInUp animate__animated animate__delay-2s"
-                style="--animate-duration: 0.2s; --animate-delay: 0.4s; --width: auto; --height: auto; --top: 5%; --left: 90%; z-index: 0"
-                src="./assets/images/item.svg" alt="item" />
-            </div>
-          </div>
-        </div>
-      </div>
-    </div> -->
-
-    <div class="about container">
-      <div class="about__content content">
-        <div class="about__text">
-          <h2 class="about__headline headline">О компании XCOM</h2>
-          <div class="about__description">
-            <p>Входим в <span class="orange">ТОП-25 в крупнейших рейтингах</span>. Мы создаем и развиваем инновационные
-              технологии, помогая бизнесу и государственным структурам повышать эффективность.</p>
-            <p>Мы фокусируемся на <span class="orange">поддержке импортозамещения и локализации</span>, предлагая
-              партнерам доступ к нашей экосистеме, ресурсам и клиентской базе.</p>
-          </div>
-        </div>
-        <div class="about__image">
-          <img src="./assets/images/tagline-bg-1.png" alt="Офис XCOM" loading="lazy">
-        </div>
-      </div>
-    </div>
-    <div class="services container">
-      <div class="services__content content">
-        <h2 class="services__headline headline">Наши услуги</h2>
-
-        <div class="services__grid">
-          <!-- Услуга 1 -->
-          <a href="#atc-service" class="service-card" style="--img-url: url('./images/tagline-bg-1.png')">
-            <div class="service-card__overlay"></div>
-            <div class="service-card__content">
-              <h3 class="service-card__title">Обслуживание офисных АТС и IP-телефонии</h3>
-              <div class="service-card__price">от 6 000 ₽/мес.</div>
-            </div>
-          </a>
-
-          <!-- Услуга 2 -->
-          <a href="#email-service" class="service-card" style="--img-url: url('./images/tagline-bg-1.png')">
-            <div class="service-card__overlay"></div>
-            <div class="service-card__content">
-              <h3 class="service-card__title">Поддержка корпоративной электронной почты</h3>
-              <div class="service-card__price">от 7 500 ₽/мес.</div>
-            </div>
-          </a>
-
-          <!-- Услуга 3 -->
-          <a href="#computers-service" class="service-card" style="--img-url: url('./images/tagline-bg-1.png')">
-            <div class="service-card__overlay"></div>
-            <div class="service-card__content">
-              <h3 class="service-card__title">ИТ аутсорсинг — Обслуживание компьютеров</h3>
-              <div class="service-card__price">от 1 800 ₽/мес.</div>
-            </div>
-          </a>
-
-          <!-- Услуга 4 -->
-          <a href="#servers-service" class="service-card" style="--img-url: url('./images/tagline-bg-1.png')">
-            <div class="service-card__overlay"></div>
-            <div class="service-card__content">
-              <h3 class="service-card__title">Обслуживание и поддержка серверов и СХД</h3>
-              <div class="service-card__price">от 30 000 ₽/мес.</div>
-            </div>
-          </a>
-
-          <!-- Услуга 5 -->
-          <a href="#printers-service" class="service-card" style="--img-url: url('./images/tagline-bg-1.png')">
-            <div class="service-card__overlay"></div>
-            <div class="service-card__content">
-              <h3 class="service-card__title">Обслуживание и поддержка копировально-печатной техники</h3>
-              <div class="service-card__price">от 1 500 ₽/мес.</div>
-            </div>
-          </a>
-
-          <!-- Услуга 6 -->
-          <a href="#internet-service" class="service-card" style="--img-url: url('./images/tagline-bg-1.png')">
-            <div class="service-card__overlay"></div>
-            <div class="service-card__content">
-              <h3 class="service-card__title">Поддержка доступа в Интернет</h3>
-              <div class="service-card__price">от 5 000 ₽/мес.</div>
-            </div>
-          </a>
-
-          <!-- Услуга 7 -->
-          <a href="#network-service" class="service-card" style="--img-url: url('./images/tagline-bg-1.png')">
-            <div class="service-card__overlay"></div>
-            <div class="service-card__content">
-              <h3 class="service-card__title">Обслуживание и поддержка ЛВС</h3>
-              <div class="service-card__price">от 3 500 ₽/час.</div>
-            </div>
-          </a>
-
-          <!-- Услуга 8 -->
-          <a href="#security-service" class="service-card" style="--img-url: url('./images/tagline-bg-1.png')">
-            <div class="service-card__overlay"></div>
-            <div class="service-card__content">
-              <h3 class="service-card__title">Аутсорсинг информационной безопасности</h3>
-              <div class="service-card__price">по запросу</div>
-            </div>
-          </a>
-        </div>
-      </div>
-    </div>
-    <div class="faq container">
-      <div class="faq__content content">
-        <h2 class="faq__headline headline">Вопросы и ответы</h2>
-
-        <div class="faq__list">
-          <!-- Вопрос 1 -->
-          <div class="faq-item">
-            <button class="faq-item__question">
-              <span>Какие компании подходят</span>
-              <i class="fa-solid fa-plus"></i>
-            </button>
-            <div class="faq-item__answer">
-              <p>Наши решения подходят для компаний любого размера - от малого бизнеса до крупных предприятий. Мы
-                работаем с организациями из различных отраслей, включая IT, ритейл, производство и сферу услуг.</p>
-            </div>
-          </div>
-
-          <!-- Вопрос 2 -->
-          <div class="faq-item">
-            <button class="faq-item__question">
-              <span>Сколько времени занимает рассмотрение</span>
-              <i class="fa-solid fa-plus"></i>
-            </button>
-            <div class="faq-item__answer">
-              <p>Стандартный срок рассмотрения заявки составляет от 1 до 3 рабочих дней. В срочных случаях мы можем
-                ускорить процесс до 24 часов.</p>
-            </div>
-          </div>
-
-          <!-- Вопрос 3 -->
-          <div class="faq-item">
-            <button class="faq-item__question">
-              <span>Если нужен NDA</span>
-              <i class="fa-solid fa-plus"></i>
-            </button>
-            <div class="faq-item__answer">
-              <p>Мы готовы подписать соглашение о неразглашении (NDA) перед обсуждением деталей проекта. Наши юристы
-                оперативно подготовят необходимые документы.</p>
-            </div>
-          </div>
-
-          <!-- Остальные вопросы аналогично -->
-        </div>
-      </div>
-    </div>
-    <a id="contacts"></a>
-    <div class="block container" style="--bg-color: var(--color-grey-light)">
-      <div class="block__content content">
-        <div class="wrapper margin-top-sm margin-bottom-sm">
-          <h2 class="headline headline--margin-sm headline--center">Остались вопросы?</h2>
-          <p class="note">Свяжитесь с нами</p>
-          <div class="flex">
-            <a href="https://t.me/+79850117765" target="_blank"> <img src="./assets/images/tg.svg" alt="tg" /> </a>
-            <a href="https://wa.me/79850117765" target="_blank"><img src="./assets/images/wa.svg" alt="wa" /></a>
-          </div>
-          <div class="flex">
-            <a href="mailto:order@xcom.ru" class="link"> <img src="./assets/images/mail.svg" alt="tg" />order@xcom.ru
+          <div class="info__list">
+            <a class="button button__unclickable">
+              <img src="./assets/images/government.svg" alt="" />
+              Государственным служащим
+            </a>
+            <a class="button button__unclickable">
+              <img src="./assets/images/design.svg" alt="" />
+              Дизайнерам
+            </a>
+            <a class="button button__unclickable">
+              <img src="./assets/images/student.svg" alt="" />
+              Студентам и преподавателям
+            </a>
+            <a class="button button__unclickable">
+              <img src="./assets/images/manager.svg" alt="" />
+              Менеджерам и руководителям
+            </a>
+            <a class="button button__unclickable">
+              <img src="./assets/images/programmer.svg" alt="" />
+              Программистам
             </a>
           </div>
-          <p class="note note--main">
-            Офис на Кронштадтском бульваре<br />
-            125212, г. Москва, Кронштадтский бульвар, 3А, 4-й этаж
-          </p>
+        </div>
+      </div>
+      <div class="bullets container">
+        <div class="bullets__content bullets__content--extra-padding content">
+          <h2 class="headline">Что вы получаете</h2>
+          <div class="bullets__grid bullets__grid--sm">
+            <div class="bullets__item bullets__item--variant bullets__item--column"><img class="bullets__icon" src="assets/images/rocket.svg" alt="✔" />Для экономии рабочего пространства</div>
+            <div class="bullets__item bullets__item--variant bullets__item--column"><img class="bullets__icon" src="assets/images/refresh.svg" alt="✔" />Для офисных сотрудников</div>
+            <div class="bullets__item bullets__item--variant bullets__item--column"><img class="bullets__icon" src="assets/images/wizard.svg" alt="✔" />Для безопасных вычислений</div>
+            <div class="bullets__item bullets__item--variant bullets__item--column"><img class="bullets__icon" src="assets/images/award.svg" alt="✔" />Для государственных служащих</div>
+            <div class="bullets__item bullets__item--variant bullets__item--column">
+              <img class="bullets__icon" src="assets/images/models.svg" alt="✔" />Для офисных Для удаленного доступа к инфраструктуре VDI
+            </div>
+            <div class="bullets__item bullets__item--variant bullets__item--column">
+              <img class="bullets__icon" src="assets/images/frost.svg" alt="✔" />Для удаленного доступа к терминальной инфраструктуре
+            </div>
+            <div class="bullets__item bullets__item--variant bullets__item--column">
+              <img class="bullets__icon" src="assets/images/mute.svg" alt="✔" />Для удаленного доступа к терминальной инфраструктуре
+            </div>
+            <div class="bullets__item bullets__item--variant bullets__item--column">
+              <img class="bullets__icon" src="assets/images/cup.svg" alt="✔" />Для удаленного доступа к терминальной инфраструктуре
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container margin-bottom-sm" id="callback">
+        <div class="content center">
+          <h2 class="headline headline--center">Заполните форму</h2>
+          <form class="form" id="main-form " action="#">
+            <div class="form__item">
+              <label for="company" class="form__label">Название компании</label>
+              <input type="text" class="form__input" placeholder=" " name="company" />
+            </div>
+            <div class="form__item">
+              <label for="taxId" class="form__label">ИНН</label>
+              <input type="text" class="form__input" placeholder=" " name="taxId" />
+            </div>
+            <div class="form__item">
+              <label for="description" class="form__label">Описание</label>
+              <input type="text" class="form__input" placeholder=" " name="description" />
+            </div>
+            <div class="form__item">
+              <label for="revenue" class="form__label">Выручка за 2024 год</label>
+              <input type="number" class="form__input" placeholder=" " name="revenue" />
+            </div>
+            <div class="form__item">
+              <label for="email" class="form__label">E-mail</label>
+              <input type="email" class="form__input" placeholder=" " name="email" />
+            </div>
+            <div class="form__item">
+              <label for="phone" class="form__label">Номер телефона</label>
+              <input type="number" class="form__input" placeholder=" " name="phone" />
+            </div>
+            <div class="form__item">
+              <label for="fullName" class="form__label">ФИО</label>
+              <input type="text" class="form__input" placeholder=" " name="fullName" />
+            </div>
+            <div class="form__item form__item--checkbox">
+              <input type="checkbox" id="privacy-policy" name="privacy-policy" class="form__checkbox" />
+              <label for="privacy-policy" class="form__checkbox-label"> Я согласен на обработку персональных данных </label>
+              <div class="error-message" style="display: none"></div>
+            </div>
+            <button type="submit" class="form__button button"><img src="assets/images/send.svg" alt="" />Отправить</button>
+            <p class="note">Свяжемся с Вами в течении 10 минут</p>
+          </form>
+        </div>
+      </div>
+
+      <div class="about container" id="about">
+        <div class="about__content content">
+          <div class="about__text">
+            <h2 class="about__headline headline">О компании XCOM</h2>
+            <div class="about__description">
+              <p>
+                Входим в <span class="orange">ТОП-25 в крупнейших рейтингах</span>. Мы создаем и развиваем инновационные технологии, помогая бизнесу и государственным структурам повышать
+                эффективность.
+              </p>
+              <p>Мы фокусируемся на <span class="orange">поддержке импортозамещения и локализации</span>, предлагая партнерам доступ к нашей экосистеме, ресурсам и клиентской базе.</p>
+            </div>
+          </div>
+          <div class="about__image">
+            <img src="./assets/images/tagline-bg-1.png" alt="Офис XCOM" loading="lazy" />
+          </div>
+        </div>
+      </div>
+      <div class="services container">
+        <div class="services__content content">
+          <h2 class="services__headline headline">Наши услуги</h2>
+
+          <div class="services__grid">
+            <a href="#" class="service-card" style="--img-url: url('./images/tagline-bg-1.png')">
+              <div class="service-card__overlay"></div>
+              <div class="service-card__content">
+                <h3 class="service-card__title">Обслуживание офисных АТС и IP-телефонии</h3>
+                <div class="service-card__price">от 6 000 ₽/мес.</div>
+              </div>
+            </a>
+
+            <a href="#" class="service-card" style="--img-url: url('./images/tagline-bg-1.png')">
+              <div class="service-card__overlay"></div>
+              <div class="service-card__content">
+                <h3 class="service-card__title">Поддержка корпоративной электронной почты</h3>
+                <div class="service-card__price">от 7 500 ₽/мес.</div>
+              </div>
+            </a>
+
+            <a href="#" class="service-card" style="--img-url: url('./images/tagline-bg-1.png')">
+              <div class="service-card__overlay"></div>
+              <div class="service-card__content">
+                <h3 class="service-card__title">ИТ аутсорсинг — Обслуживание компьютеров</h3>
+                <div class="service-card__price">от 1 800 ₽/мес.</div>
+              </div>
+            </a>
+
+            <a href="#" class="service-card" style="--img-url: url('./images/tagline-bg-1.png')">
+              <div class="service-card__overlay"></div>
+              <div class="service-card__content">
+                <h3 class="service-card__title">Обслуживание и поддержка серверов и СХД</h3>
+                <div class="service-card__price">от 30 000 ₽/мес.</div>
+              </div>
+            </a>
+
+            <a href="#" class="service-card" style="--img-url: url('./images/tagline-bg-1.png')">
+              <div class="service-card__overlay"></div>
+              <div class="service-card__content">
+                <h3 class="service-card__title">Обслуживание и поддержка копировально-печатной техники</h3>
+                <div class="service-card__price">от 1 500 ₽/мес.</div>
+              </div>
+            </a>
+
+            <a href="#" class="service-card" style="--img-url: url('./images/tagline-bg-1.png')">
+              <div class="service-card__overlay"></div>
+              <div class="service-card__content">
+                <h3 class="service-card__title">Поддержка доступа в Интернет</h3>
+                <div class="service-card__price">от 5 000 ₽/мес.</div>
+              </div>
+            </a>
+
+            <a href="#" class="service-card" style="--img-url: url('./images/tagline-bg-1.png')">
+              <div class="service-card__overlay"></div>
+              <div class="service-card__content">
+                <h3 class="service-card__title">Обслуживание и поддержка ЛВС</h3>
+                <div class="service-card__price">от 3 500 ₽/час.</div>
+              </div>
+            </a>
+
+            <a href="#" class="service-card" style="--img-url: url('./images/tagline-bg-1.png')">
+              <div class="service-card__overlay"></div>
+              <div class="service-card__content">
+                <h3 class="service-card__title">Аутсорсинг информационной безопасности</h3>
+                <div class="service-card__price">по запросу</div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="faq container">
+        <div class="faq__content content">
+          <h2 class="faq__headline headline">Вопросы и ответы</h2>
+
+          <div class="faq__list">
+            <div class="faq-item">
+              <button class="faq-item__question">
+                <span>Какие компании подходят</span>
+                <i class="fa-solid fa-plus"></i>
+              </button>
+              <div class="faq-item__answer">
+                <p>
+                  Наши решения подходят для компаний любого размера - от малого бизнеса до крупных предприятий. Мы работаем с организациями из различных отраслей, включая IT, ритейл, производство и
+                  сферу услуг.
+                </p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-item__question">
+                <span>Сколько времени занимает рассмотрение</span>
+                <i class="fa-solid fa-plus"></i>
+              </button>
+              <div class="faq-item__answer">
+                <p>Стандартный срок рассмотрения заявки составляет от 1 до 3 рабочих дней. В срочных случаях мы можем ускорить процесс до 24 часов.</p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-item__question">
+                <span>Если нужен NDA</span>
+                <i class="fa-solid fa-plus"></i>
+              </button>
+              <div class="faq-item__answer">
+                <p>Мы готовы подписать соглашение о неразглашении (NDA) перед обсуждением деталей проекта. Наши юристы оперативно подготовят необходимые документы.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="block container" id="contacts" style="--bg-color: var(--color-grey-light)">
+        <div class="block__content content">
+          <div class="wrapper margin-top-sm margin-bottom-sm">
+            <h2 class="headline headline--margin-sm headline--center">Остались вопросы?</h2>
+            <p class="note">Свяжитесь с нами</p>
+            <div class="flex">
+              <a href="https://t.me/+79850117765" target="_blank"> <img src="./assets/images/tg.svg" alt="tg" /> </a>
+              <a href="https://wa.me/79850117765" target="_blank"><img src="./assets/images/wa.svg" alt="wa" /></a>
+            </div>
+            <div class="flex">
+              <a href="mailto:order@xcom.ru" class="link"> <img src="./assets/images/mail.svg" alt="tg" />order@xcom.ru </a>
+            </div>
+            <p class="note note--main">
+              Офис на Кронштадтском бульваре<br />
+              125212, г. Москва, Кронштадтский бульвар, 3А, 4-й этаж
+            </p>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="footer container">
+      <div class="footer__content content">
+        <div class="footer__item">
+          <a href="https://www.xcom.ru/" class="logo">
+            <img class="logo__img" src="./assets/images/logo.svg" alt="XCOM" />
+          </a>
+          <a href="#offer" class="footer__button button button--main">
+            <img src="./assets/images/send.svg" alt="" />
+            Оставить&nbsp;заявку
+          </a>
+          <nav class="footer__menu">
+            <a href="#offer" class="footer__link">ПК Aquarius</a>
+            <a href="#description" class="footer__link">О компьютерах Aquarius</a>
+            <a href="#tasks" class="footer__link">Решаемые задачи</a>
+            <a href="#why" class="footer__link">Почему выбирают Aquarius?</a>
+            <a href="#solution" class="footer__link">Выберите своё решение</a>
+            <a href="#for-whom" class="footer__link">Кому подойдут эти решения</a>
+            <a href="#about" class="footer__link">О нас</a>
+          </nav>
+        </div>
+      </div>
+    </footer>
+    <div class="container margin-top-sm margin-bottom-sm">
+      <p class="note note--left content" id="copy"></p>
+    </div>
+    <div class="modal animate__animated" style="display: none">
+      <div class="modal__window animate__animated">
+        <div class="modal__close">
+          <span></span>
+          <span></span>
+        </div>
+        <div class="modal__content">
+          <p class="modal__headline"></p>
+          <p class="modal__text"></p>
+          <a class="modal__button button"></a>
         </div>
       </div>
     </div>
-  </main>
-  <footer class="footer container">
-    <div class="footer__content content">
-      <div class="footer__item">
-        <a href="https://www.xcom.ru/" class="logo">
-          <img class="logo__img" src="./assets/images/logo.svg" alt="XCOM" />
-        </a>
-        <a href="#offer" class="footer__button button button--main">
-          <img src="./assets/images/send.svg" alt="" />
-          Оставить&nbsp;заявку
-        </a>
-        <nav class="footer__menu">
-          <a href="#main" class="footer__link">ПК Aquarius</a>
-          <a href="#about" class="footer__link">О компьютерах Aquarius</a>
-          <a href="#tasks" class="footer__link">Решаемые задачи</a>
-          <a href="#why" class="footer__link">Почему выбирают Aquarius?</a>
-          <a href="#solution" class="footer__link">Выберите своё решение</a>
-          <a href="#for-whom" class="footer__link">Кому подойдут эти решения</a>
-          <a href="#about-us" class="footer__link">О нас</a>
-        </nav>
-      </div>
-    </div>
-  </footer>
-  <div class="container margin-top-sm margin-bottom-sm">
-    <p class="note note--left content" id="copy"></p>
-  </div>
-  <div class="modal animate__animated" style="display: none">
-    <div class="modal__window animate__animated">
-      <div class="modal__close">
-        <span></span>
-        <span></span>
-      </div>
-      <div class="modal__content">
-        <p class="modal__headline"></p>
-        <p class="modal__text"></p>
-        <a class="modal__button button"></a>
-      </div>
-    </div>
-  </div>
-  <script src="./assets/script.js" defer></script>
-</body>
-
+    <script src="./assets/script.js" defer></script>
+  </body>
 </html>

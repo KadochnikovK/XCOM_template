@@ -27,44 +27,40 @@ const swiper = new Swiper(".swiper", {
   },
 });
 
-
 function updateSlideHeights() {
-  const slides = document.querySelectorAll('.swiper-slide');
-  slides.forEach(slide => {
+  const slides = document.querySelectorAll(".swiper-slide");
+  slides.forEach((slide) => {
     slide.style.height = `100%`;
   });
-  const swiperWrapper = document.querySelector('.swiper-wrapper');
+  const swiperWrapper = document.querySelector(".swiper-wrapper");
   if (!swiperWrapper) return;
 
   const swiperHeight = swiperWrapper.offsetHeight;
 
-
-  slides.forEach(slide => {
+  slides.forEach((slide) => {
     slide.style.height = `${swiperHeight}px`;
   });
 }
 
-// Вызываем при загрузке и при ресайзе
-window.addEventListener('load', () => {
-  console.log('resize')
-  updateSlideHeights()
+window.addEventListener("load", () => {
+  updateSlideHeights();
 });
-window.addEventListener('resize', () => {
-  console.log('resize')
-  updateSlideHeights()
+window.addEventListener("resize", () => {
+  updateSlideHeights();
 });
-
 
 document.addEventListener("DOMContentLoaded", function () {
   const form = document.querySelector("form");
   const formItems = form.querySelectorAll(".form__item");
+  const privacyCheckbox = document.querySelector("#privacy-policy");
+  const privacyError = document.querySelector(".form__item--checkbox .error-message");
 
   function clearErrors() {
     formItems.forEach((item) => {
       item.classList.remove("form__item--not-valid");
       const errorElement = item.querySelector(".error-message");
       if (errorElement) {
-        errorElement.remove();
+        errorElement.style.display = "none";
       }
     });
   }
@@ -73,17 +69,29 @@ document.addEventListener("DOMContentLoaded", function () {
     const formItem = element.closest(".form__item");
     formItem.classList.add("form__item--not-valid");
 
-    if (!formItem.querySelector(".error-message")) {
-      const errorElement = document.createElement("div");
-      errorElement.className = "error-message";
+    const errorElement = formItem.querySelector(".error-message");
+    if (errorElement) {
       errorElement.textContent = message;
-      formItem.appendChild(errorElement);
+      errorElement.style.display = "block";
+    } else {
+      const newErrorElement = document.createElement("div");
+      newErrorElement.className = "error-message";
+      newErrorElement.textContent = message;
+      formItem.appendChild(newErrorElement);
     }
   }
 
   function validateField(field) {
     const value = field.value.trim();
     const name = field.name;
+
+    if (field.type === "checkbox") {
+      if (!field.checked) {
+        addError(field, "Необходимо ваше согласие");
+        return false;
+      }
+      return true;
+    }
 
     if (!value) {
       addError(field, "Это поле обязательно для заполнения");
@@ -121,49 +129,43 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   function showModal(title, text, buttonText) {
-
-    const modal = document.querySelector('.modal');
-    const modalWindow = modal.querySelector('.modal__window');
-    const modalHeadline = modal.querySelector('.modal__headline');
-    const modalText = modal.querySelector('.modal__text');
-    const modalButton = modal.querySelector('.modal__button');
-    const modalClose = modal.querySelector('.modal__close');
-
+    const modal = document.querySelector(".modal");
+    const modalWindow = modal.querySelector(".modal__window");
+    const modalHeadline = modal.querySelector(".modal__headline");
+    const modalText = modal.querySelector(".modal__text");
+    const modalButton = modal.querySelector(".modal__button");
+    const modalClose = modal.querySelector(".modal__close");
 
     modalHeadline.textContent = title;
     modalText.textContent = text;
     modalButton.textContent = buttonText;
 
+    modal.style.display = "flex";
 
-    modal.style.display = 'flex';
-
-    modalWindow.classList.add('animate__fadeInUp');
-    modal.classList.add('animate__fadeIn');
+    modalWindow.classList.add("animate__fadeInUp");
+    modal.classList.add("animate__fadeIn");
 
     function closeModal() {
-
-      modalWindow.classList.remove('animate__fadeInUp');
-      modalWindow.classList.add('animate__fadeOutDown');
-      modal.classList.remove('animate__fadeIn');
-      modal.classList.add('animate__fadeOut');
+      modalWindow.classList.remove("animate__fadeInUp");
+      modalWindow.classList.add("animate__fadeOutDown");
+      modal.classList.remove("animate__fadeIn");
+      modal.classList.add("animate__fadeOut");
 
       setTimeout(() => {
-        modal.style.display = 'none';
-        modalWindow.classList.remove('animate__fadeOutDown');
-        modal.classList.remove('animate__fadeOut');
+        modal.style.display = "none";
+        modalWindow.classList.remove("animate__fadeOutDown");
+        modal.classList.remove("animate__fadeOut");
 
-
-        modalHeadline.textContent = '';
-        modalText.textContent = '';
-        modalButton.textContent = '';
+        modalHeadline.textContent = "";
+        modalText.textContent = "";
+        modalButton.textContent = "";
       }, 500);
     }
 
+    modalButton.addEventListener("click", closeModal);
+    modalClose.addEventListener("click", closeModal);
 
-    modalButton.addEventListener('click', closeModal);
-    modalClose.addEventListener('click', closeModal);
-
-    modal.addEventListener('click', (e) => {
+    modal.addEventListener("click", (e) => {
       if (e.target === modal) {
         closeModal();
       }
@@ -175,13 +177,18 @@ document.addEventListener("DOMContentLoaded", function () {
     clearErrors();
 
     let isValid = true;
-    const fields = form.querySelectorAll("input, textarea");
+    const fields = form.querySelectorAll("input:not([type=submit]), textarea");
 
     fields.forEach((field) => {
       if (!validateField(field)) {
         isValid = false;
       }
     });
+
+    if (!privacyCheckbox.checked) {
+      addError(privacyCheckbox, "Необходимо ваше согласие");
+      isValid = false;
+    }
 
     if (isValid) {
       const formData = {
@@ -192,11 +199,18 @@ document.addEventListener("DOMContentLoaded", function () {
         email: form.elements.email.value.trim(),
         phone: form.elements.phone.value.trim(),
         fullName: form.elements.fullName.value.trim(),
+        privacyPolicy: form.elements["privacy-policy"].checked,
       };
 
       console.log("Данные формы:", formData);
-
       showModal("Данные успешно отправлены", "Мы свяжемся с вами в течение 10 минут", "Хорошо");
+    }
+  });
+
+  privacyCheckbox.addEventListener("change", function () {
+    if (this.checked) {
+      this.closest(".form__item").classList.remove("form__item--not-valid");
+      privacyError.style.display = "none";
     }
   });
 
@@ -234,11 +248,11 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  const header = document.querySelector('header');
-  const main = document.querySelector('main');
-  console.log('header!!!!!!!!!!', header, main)
+  const header = document.querySelector("header");
+  const main = document.querySelector("main");
+  console.log("header!!!!!!!!!!", header, main);
   if (header && main) {
-    const resizeObserver = new ResizeObserver(entries => {
+    const resizeObserver = new ResizeObserver((entries) => {
       for (let entry of entries) {
         main.style.marginTop = `${entry.target.offsetHeight}px`;
       }
@@ -249,10 +263,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
   const currentYear = new Date().getFullYear();
 
-
   const copyrightText = `© 2018–${currentYear} X-Com. Все права защищены.`;
 
-  const copyElement = document.getElementById('copy');
+  const copyElement = document.getElementById("copy");
   if (copyElement) {
     copyElement.textContent = copyrightText;
   } else {
@@ -260,65 +273,53 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
-
-document.addEventListener('DOMContentLoaded', function () {
-
-  const colors = ['#f27028', '#1a7bbf', '#2ecc71', '#9b59b6', '#e74c3c'];
-  document.querySelectorAll('.review__avatar').forEach(avatar => {
+document.addEventListener("DOMContentLoaded", function () {
+  const colors = ["#f27028", "#1a7bbf", "#2ecc71", "#9b59b6", "#e74c3c"];
+  document.querySelectorAll(".review__avatar").forEach((avatar) => {
     if (!avatar.style.backgroundColor) {
       const randomColor = colors[Math.floor(Math.random() * colors.length)];
       avatar.style.backgroundColor = randomColor;
     }
   });
 
-
-  document.querySelectorAll('.review__toggle').forEach(toggle => {
-    toggle.addEventListener('click', function () {
-      const review = this.closest('.review');
-      const body = review.querySelector('.review__body');
-      body.classList.toggle('expanded');
-      this.classList.toggle('active');
+  document.querySelectorAll(".review__toggle").forEach((toggle) => {
+    toggle.addEventListener("click", function () {
+      const review = this.closest(".review");
+      const body = review.querySelector(".review__body");
+      body.classList.toggle("expanded");
+      this.classList.toggle("active");
     });
   });
 
-
-  document.querySelectorAll('.review__action').forEach(button => {
-    button.addEventListener('click', function () {
-      const isLike = this.querySelector('.fa-thumbs-up');
-      const isDislike = this.querySelector('.fa-thumbs-down');
+  document.querySelectorAll(".review__action").forEach((button) => {
+    button.addEventListener("click", function () {
+      const isLike = this.querySelector(".fa-thumbs-up");
+      const isDislike = this.querySelector(".fa-thumbs-down");
 
       if (isLike) {
-        this.classList.toggle('liked');
+        this.classList.toggle("liked");
         // Здесь добавить запрос для сохранения лайка
       } else if (isDislike) {
-        this.classList.toggle('disliked');
+        this.classList.toggle("disliked");
         // Здесь добавить запрос для сохранения дизлайка
       }
     });
   });
 });
 
+const reviews = document.querySelector("#reviews");
 
-document.addEventListener('DOMContentLoaded', function () {
-  const questions = document.querySelectorAll('.faq-item__question');
+reviews.style.display = "none";
 
-  questions.forEach(question => {
-    question.addEventListener('click', function () {
-      const item = this.closest('.faq-item');
-      const answer = item.querySelector('.faq-item__answer');
-
-
-      document.querySelectorAll('.faq-item__answer').forEach(ans => {
-        if (ans !== answer) {
-          ans.classList.remove('active');
-          ans.previousElementSibling.classList.remove('active');
-        }
+const goodsMeta = document.querySelectorAll(".goods__meta");
+goodsMeta.forEach((good) => {
+  good.addEventListener("click", function () {
+    console.log(reviews);
+    reviews.style.display = "block";
+    if (reviews) {
+      reviews.scrollIntoView({
+        behavior: "smooth",
       });
-
-
-      this.classList.toggle('active');
-      answer.classList.toggle('active');
-    });
+    }
   });
 });
-
