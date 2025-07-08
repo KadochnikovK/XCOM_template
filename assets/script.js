@@ -25,6 +25,10 @@ const swiper = new Swiper(".swiper", {
     el: ".swiper-pagination",
     clickable: true,
   },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
 });
 
 function updateSlideHeights() {
@@ -307,23 +311,23 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-document.addEventListener('DOMContentLoaded', function () {
-  const questions = document.querySelectorAll('.faq-item__question');
+document.addEventListener("DOMContentLoaded", function () {
+  const questions = document.querySelectorAll(".faq-item__question");
 
-  questions.forEach(question => {
-    question.addEventListener('click', function () {
-      const item = this.closest('.faq-item');
-      const answer = item.querySelector('.faq-item__answer');
+  questions.forEach((question) => {
+    question.addEventListener("click", function () {
+      const item = this.closest(".faq-item");
+      const answer = item.querySelector(".faq-item__answer");
 
-      document.querySelectorAll('.faq-item__answer').forEach(ans => {
+      document.querySelectorAll(".faq-item__answer").forEach((ans) => {
         if (ans !== answer) {
-          ans.classList.remove('active');
-          ans.previousElementSibling.classList.remove('active');
+          ans.classList.remove("active");
+          ans.previousElementSibling.classList.remove("active");
         }
       });
 
-      this.classList.toggle('active');
-      answer.classList.toggle('active');
+      this.classList.toggle("active");
+      answer.classList.toggle("active");
     });
   });
 });
