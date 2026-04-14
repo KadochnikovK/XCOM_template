@@ -1,3 +1,39 @@
+document.addEventListener("DOMContentLoaded", function () {
+  const workStepsSlider = document.querySelector(".work-steps__slider");
+
+  if (workStepsSlider) {
+    new Swiper(".work-steps__slider", {
+      slidesPerView: 1,
+      spaceBetween: 0,
+      loop: true,
+      // loopAdditionalSlides: 2,
+      loopPreventsSlide: false,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      breakpoints: {
+        640: {
+          slidesPerView: 2,
+          spaceBetween: 0,
+        },
+        992: {
+          slidesPerView: 3,
+          spaceBetween: 0,
+        },
+        1200: {
+          slidesPerView: 4,
+          spaceBetween: 0,
+        },
+      },
+    });
+  }
+});
+
 const swiper = new Swiper(".swiper", {
   breakpoints: {
     320: {
@@ -32,11 +68,11 @@ const swiper = new Swiper(".swiper", {
 });
 
 function updateSlideHeights() {
-  const slides = document.querySelectorAll(".swiper-slide");
+  const slides = document.querySelectorAll(".goods .swiper-slide");
   slides.forEach((slide) => {
     slide.style.height = `100%`;
   });
-  const swiperWrapper = document.querySelector(".swiper-wrapper");
+  const swiperWrapper = document.querySelector(".goods .swiper-wrapper");
   if (!swiperWrapper) return;
 
   const swiperHeight = swiperWrapper.offsetHeight;

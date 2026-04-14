@@ -1,0 +1,121 @@
+.seo-text {
+    padding: var(--padding-xl) 0;
+    background-color: var(--color-white);
+    border-top: var(--border-h-md) solid var(--color-grey-light);
+    border-bottom: var(--border-h-md) solid var(--color-grey-light);
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: var(--gap-lg);
+    }
+
+    &__headline {
+        text-align: center;
+
+        &::after {
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+
+    &__body {
+        font-size: var(--fs-sm);
+        line-height: var(--lh-md);
+        color: var(--color-regular);
+        
+        p {
+            margin-bottom: var(--gap-md);
+            
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    &__subtitle {
+        font-size: var(--fs-base);
+        font-weight: 600;
+        color: var(--color-blue-main);
+        margin: var(--gap-lg) 0 var(--gap-md);
+        
+        &:first-child {
+            margin-top: 0;
+        }
+    }
+
+    &__list {
+        margin: var(--gap-md) 0;
+        padding-left: var(--padding-lg);
+        
+        li {
+            margin-bottom: var(--gap-xs);
+            font-size: var(--fs-sm);
+            line-height: var(--lh-md);
+            
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+        
+        @media (max-width: 767px) {
+            padding-left: var(--padding-md);
+        }
+    }
+
+    &__toggle {
+        display: none;
+        align-items: center;
+        justify-content: center;
+        gap: var(--gap-xs);
+        width: fit-content;
+        margin: 0 auto;
+        background: none;
+        border: none;
+        color: var(--color-blue-main);
+        font-size: var(--fs-sm);
+        font-weight: 500;
+        cursor: pointer;
+        transition: all 0.2s ease;
+        
+        &:hover {
+            color: var(--color-orange);
+            
+            i {
+                transform: translateY(2px);
+            }
+        }
+        
+        i {
+            transition: transform 0.2s ease;
+            font-size: var(--fs-xs);
+        }
+        
+        &.active i {
+            transform: rotate(180deg);
+        }
+    }
+
+   
+    @media (max-width: 767px) {
+        &__body {
+            max-height: 300px;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+            
+            &.expanded {
+                max-height: none;
+                overflow: visible;
+            }
+        }
+        
+        &__toggle {
+            display: flex;
+        }
+    }
+}
