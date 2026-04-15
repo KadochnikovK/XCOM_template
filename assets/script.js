@@ -8,10 +8,10 @@ document.addEventListener("DOMContentLoaded", function () {
       loop: true,
       // loopAdditionalSlides: 2,
       loopPreventsSlide: false,
-      pagination: {
-        el: ".work-steps__slider .swiper-pagination",
-        clickable: true,
-      },
+      // pagination: {
+      //   el: ".work-steps__slider .swiper-pagination",
+      //   clickable: true,
+      // },
       navigation: {
         nextEl: ".work-steps__slider .swiper-button-next",
         prevEl: ".work-steps__slider .swiper-button-prev",

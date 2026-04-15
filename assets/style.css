@@ -2649,9 +2649,6 @@ a {
 .product-card:hover .product-card__title {
   color: var(--color-white);
 }
-.product-card:hover .product-card__icon img {
-  filter: brightness(0) invert(1);
-}
 @media (max-width: 767px) {
   .product-card {
     padding: var(--padding-xs) var(--padding-sm);
