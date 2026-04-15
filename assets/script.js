@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
-const swiper = new Swiper(".goods__content", {
+const swiper = new Swiper(".goods__slider", {
   breakpoints: {
     320: {
       slidesPerView: 1,
@@ -58,12 +58,12 @@ const swiper = new Swiper(".goods__content", {
     disableOnInteraction: false,
   },
   pagination: {
-    el: ".goods__content .swiper-pagination",
+    el: ".goods__slider .swiper-pagination",
     clickable: true,
   },
   navigation: {
-    nextEl: ".goods__content .swiper-button-next",
-    prevEl: ".goods__content .swiper-button-prev",
+    nextEl: ".goods__slider .swiper-button-next",
+    prevEl: ".goods__slider .swiper-button-prev",
   },
 });
 
