@@ -9,12 +9,12 @@ document.addEventListener("DOMContentLoaded", function () {
       // loopAdditionalSlides: 2,
       loopPreventsSlide: false,
       pagination: {
-        el: ".swiper-pagination",
+        el: ".work-steps__slider .swiper-pagination",
         clickable: true,
       },
       navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
+        nextEl: ".work-steps__slider .swiper-button-next",
+        prevEl: ".work-steps__slider .swiper-button-prev",
       },
       breakpoints: {
         640: {
@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
-const swiper = new Swiper(".swiper", {
+const swiper = new Swiper(".goods__content", {
   breakpoints: {
     320: {
       slidesPerView: 1,
@@ -58,12 +58,12 @@ const swiper = new Swiper(".swiper", {
     disableOnInteraction: false,
   },
   pagination: {
-    el: ".swiper-pagination",
+    el: ".goods__content .swiper-pagination",
     clickable: true,
   },
   navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
+    nextEl: ".goods__content .swiper-button-next",
+    prevEl: ".goods__content .swiper-button-prev",
   },
 });
 
