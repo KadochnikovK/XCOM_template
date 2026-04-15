@@ -82,6 +82,8 @@
     &__col {
         padding: var(--padding-md) var(--padding-lg);
         color: var(--color-white);
+        display: flex;
+        align-items: center;
         &--name {
             flex: 2;
             font-weight: 500;
